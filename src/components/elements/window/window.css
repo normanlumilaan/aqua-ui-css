@@ -93,6 +93,7 @@
   border-bottom: inherit;
   display: flex;
   gap: 0.3em;
+  border-bottom: 2px solid var(--aqua-color-gray-2);
 }
 
 .aqua-window__navbar-btn {
