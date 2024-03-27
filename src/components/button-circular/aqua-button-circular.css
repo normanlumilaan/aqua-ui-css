@@ -11,7 +11,10 @@
   font-family: var(--aqua-font-family);
   font-size: var(--aqua-font-size);
   color: var(--aqua-color-black);
-  background: var(--aqua-color-gray-2);
+  background: radial-gradient(
+    var(--aqua-color-gray-1) 40%,
+    var(--aqua-color-gray-3)
+  );
   cursor: pointer;
   box-sizing: border-box;
   border-color: var(--aqua-color-gray-3);
@@ -63,13 +66,6 @@
 
 .aqua-btn-circular--lg {
   font-size: 20px;
-}
-
-.aqua-btn-circular--white {
-  background: radial-gradient(
-    var(--aqua-color-gray-1) 40%,
-    var(--aqua-color-gray-3)
-  );
 }
 
 .aqua-btn-circular--blue {
