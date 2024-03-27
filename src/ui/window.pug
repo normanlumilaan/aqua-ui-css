@@ -1,0 +1,38 @@
+include ../components/elements/window/window-main.pug
+include ../components/elements/window/window-title.pug
+include ../components/elements/window/window-body.pug
+include ../components/elements/window/window-navbar.pug
+include ../components/elements/window/window-navbar-btn.pug
+include ../components/elements/layout/layout.pug
+include ../components/elements/layout/layout-row.pug
+
+// ui/window
++window-main()(
+  class="aqua-dialog", 
+  data-aqua-focus="true", 
+  role="dialog",
+  id="aqua-dialog-1"
+  aria-labelledby="aqua-dialog-1-title",
+  aria-describedby="aqua-dialog-1-desc"
+  )
+  //- Show window buttons by setting hasButtons to true
+  +window-title("Window title", true)
+  +window-navbar()
+    +window-navbar-btn("Media") 
+      span.icon.icon--md 💿
+      span Media
+    +window-navbar-btn("Settings") 
+      span.icon.icon--md ⚙️
+      span Settings
+    +window-navbar-btn("Edit")
+      span.icon.icon--md 📝
+      span Edit
+    +window-navbar-btn("Burn")
+      span.icon.icon--md ©
+      span Burn
+    +window-navbar-btn("Eject") 
+      span.icon.icon--md ⏏
+      span Eject
+  +window-body()
+
+// /ui/window

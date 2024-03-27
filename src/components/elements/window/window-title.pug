@@ -1,0 +1,16 @@
+mixin window-title(title, hasButtons = false)
+  .aqua-window__title(
+    data-aqua-elem="window-title"
+  )&attributes(attributes)
+    if hasButtons !== false 
+      .aqua-window__buttons(data-aqua-elem="window-buttons")
+        +button-circular("Close window", "red")(class="aqua-window__buttons-btn")
+          include ../../../icons/x.svg
+        +button-circular("Close window", "yellow")(class="aqua-window__buttons-btn")
+          span -
+        +button-circular(undefined, "green")(class="aqua-window__buttons-btn")
+          include ../../../icons/maximize-2.svg
+    h4.aqua-window__title-txt= title
+    if hasButtons !== false 
+      div.aqua-window__title-left
+        +button-circular("What does this button do?")(class="aqua-window__buttons-btn")

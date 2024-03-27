@@ -1,0 +1,39 @@
+include ../../components/elements/window/window-main.pug
+include ../../components/elements/window/window-title.pug
+include ../../components/elements/window/window-body.pug
+include ../../components/elements/layout/layout.pug
+include ../../components/elements/layout/layout-row.pug
+include ../../components/elements/layout/layout-col.pug
+
+// ui/dialog
++window-main()(
+  class="aqua-dialog", 
+  data-aqua-focus="true", 
+  role="dialog",
+  id="aqua-dialog-1"
+  aria-labelledby="aqua-dialog-1-title",
+  aria-describedby="aqua-dialog-1-desc"
+  )
+  +window-title(undefined, false)
+  +window-body()
+    //- Set background 'image' to stripes
+    +layout("stripes")
+      +layout-row()(class="aqua-dialog__body")
+        +layout-col(3)
+          figure.aqua-dialog__icon
+            img(
+              class="aqua-dialog__icon-img" 
+              src="/img/finder_icon.png", 
+              alt="Dialog icon alt text" 
+              width="148" 
+              height="148"
+            )
+        +layout-col(9)
+          h3(id="aqua-dialog-1-title" class="aqua-dialog__title") Are you sure you want to remove the items in the Trash permanently?
+          p(id="aqua-dialog-1-desc").aqua-dialog__copy You cannot undo this action.
+          //- Set row alignment to center or end by setting align parameter to "align-center" or "align-end"
+          +layout-row("align-end")
+            +button-rounded("Cancel")(class="aqua-btn-rounded--white") Cancel
+            +button-rounded("OK")(class="aqua-btn-rounded--blue") OK
+
+// /ui/dialog

@@ -1,0 +1,120 @@
+.aqua-window {
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 0.8em;
+  border-bottom-right-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b9b9b9;
+  position: relative;
+  font-size: var(--aqua-font-size);
+  font-family: var(--aqua-font-family);
+  width: 70ch;
+  min-width: 290px;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 1;
+  line-height: var(--aqua-line-height);
+  box-shadow: 0 0.3em 0.3em rgba(0, 0, 0, 0.25);
+}
+
+.aqua-window__title {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  border-bottom: inherit;
+  border-bottom-width: 2px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  background-color: var(--aqua-color-gray-1);
+  background: var(--aqua-bg-stripes);
+  opacity: 0.5;
+  min-height: 1.28em;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.aqua-window:focus,
+.aqua-window:focus-within {
+  z-index: 2;
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.4);
+}
+
+.aqua-window:focus .aqua-window__title,
+.aqua-window:focus-within .aqua-window__title {
+  opacity: 1;
+}
+
+.aqua-window:focus .aqua-window__title,
+.aqua-window:focus-within .aqua-window__title {
+  opacity: 1;
+}
+
+.aqua-window__title-txt {
+  font-size: inherit;
+  text-align: center;
+  flex-basis: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.aqua-window__buttons {
+  display: flex;
+  flex-basis: 25%;
+  flex-grow: 0;
+  gap: 0.8em;
+}
+
+/** A html element for flex layout. Possibly replaced by button */
+.aqua-window__title-left {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: end;
+}
+
+.aqua-window__body {
+  position: relative;
+  background-color: var(--aqua-color-white);
+}
+
+.aqua-window__navbar {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  overflow: hidden;
+  background-color: var(--aqua-color-gray-1);
+  background: var(--aqua-bg-stripes);
+  border-bottom: inherit;
+  display: flex;
+  gap: 0.3em;
+}
+
+.aqua-window__navbar-btn {
+  appearance: none;
+  width: 4em;
+  height: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  font-size: inherit;
+}
+
+.aqua-window__navbar-btn:active {
+  opacity: 0.7;
+}
+
+.aqua-window__navbar-btn:hover {
+  background-color: var(--aqua-color-gray-2);
+}

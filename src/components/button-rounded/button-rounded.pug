@@ -1,0 +1,11 @@
+include ../elements/button/button.pug 
+
+mixin button-rounded(label, color = "white")
+  // .aqua-btn-rounded
+  +button(label)(
+      class="aqua-btn-rounded aqua-btn-rounded--" + color
+    )&attributes(attributes)
+    if block 
+      span.aqua-btn__label
+        block
+  // /.aqua-btn-rounded

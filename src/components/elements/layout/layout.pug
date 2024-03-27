@@ -1,0 +1,10 @@
+//- 
+  Window layout container block that contains rows.
+  bgStyle (undefined | 'stripes') - Set background style.
+mixin layout(bgStyle = undefined)
+  .aqua-layout(
+    class= bgStyle !== undefined ? "aqua-layout--stripes" : null
+  )&attributes(attributes)
+    if block 
+      block
+  
