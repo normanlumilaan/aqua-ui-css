@@ -15,7 +15,7 @@
   overflow: hidden;
   z-index: 1;
   line-height: var(--aqua-line-height);
-  box-shadow: 0 0.3em 0.3em rgba(0, 0, 0, 0.25);
+  box-shadow: var(--aqua-box-shadow-1);
 }
 
 .aqua-window__title {
@@ -40,7 +40,7 @@
 .aqua-window:focus,
 .aqua-window:focus-within {
   z-index: 2;
-  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.4);
+  box-shadow: var(--aqua-box-shadow-2);
 }
 
 .aqua-window:focus .aqua-window__title,

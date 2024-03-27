@@ -1,0 +1,8 @@
+//- OS menu bar
+header(class="aqua-menubar", id="aqua-menubar")
+  div(class="aqua-menubar__inner")
+    nav(class="aqua-menubar__nav", id="aqua-menubar-nav")
+      ul(class="aqua-menubar__nav-menu", id="aqua-menubar-nav-menu")
+        each item, index in ["File", "Edit", "View", "Help"]
+          li(class="aqua-menubar__nav-item", id="aqua-menubar-nav-menu")
+            button(class="aqua-menubar__nav-btn")= item
