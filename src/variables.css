@@ -14,7 +14,11 @@
   --aqua-font-size: 14px;
   --aqua-line-height: 1.3;
   --aqua-shadow-color: rgba(0, 0, 0, 0.35);
-  --aqua-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  /** e.g. Window inactive state */
+  --aqua-box-shadow-1: 0 0.3em 0.3em rgba(0, 0, 0, 0.25);
+  /** e.g. Window active state */
+  --aqua-box-shadow-2: 0 1em 1em rgba(0, 0, 0, 0.4);
+  --aqua-text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
   --aqua-bg-stripes: repeating-linear-gradient(
     0deg,
     #ffffff 10px,

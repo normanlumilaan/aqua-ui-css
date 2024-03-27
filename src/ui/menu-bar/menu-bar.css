@@ -1,0 +1,58 @@
+.aqua-menubar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: var(--aqua-font-family);
+  color: var(--aqua-color-black);
+  width: 100%;
+  background-color: var(--aqua-color-white);
+  font-size: var(--aqua-font-size);
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  background-color: var(--aqua-color-gray-1);
+  background: var(--aqua-bg-stripes);
+  min-height: 1.28em;
+  box-shadow: var(--aqua-box-shadow-2);
+  z-index: 999;
+}
+
+.aqua-menubar__inner {
+  position: relative;
+}
+
+.aqua-menubar__nav {
+}
+
+.aqua-menubar__nav-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.aqua-menubar__nav-item {
+}
+
+.aqua-menubar__nav-btn {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  text-shadow: var(--aqua-text-shadow);
+}
+
+.aqua-menubar__nav-btn--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
