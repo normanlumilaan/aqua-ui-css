@@ -17,22 +17,21 @@ include ../components/elements/layout/layout-row.pug
   )
   //- Show window buttons by setting hasButtons to true
   +window-title("Window title", true)
-  +window-navbar()
-    +window-navbar-btn("Media") 
-      span.icon.icon--md 💿
-      span Media
-    +window-navbar-btn("Settings") 
-      span.icon.icon--md ⚙️
-      span Settings
-    +window-navbar-btn("Edit")
-      span.icon.icon--md 📝
-      span Edit
-    +window-navbar-btn("Burn")
-      span.icon.icon--md ©
-      span Burn
-    +window-navbar-btn("Eject") 
-      span.icon.icon--md ⏏
-      span Eject
   +window-body()
-
+    +window-navbar()
+      +window-navbar-btn("Media") 
+        span.icon.icon--md 💿
+        span Media
+      +window-navbar-btn("Settings") 
+        span.icon.icon--md ⚙️
+        span Settings
+      +window-navbar-btn("Edit")
+        span.icon.icon--md 📝
+        span Edit
+      +window-navbar-btn("Burn")
+        span.icon.icon--md ©
+        span Burn
+      +window-navbar-btn("Eject") 
+        span.icon.icon--md ⏏
+        span Eject
 // /ui/window
