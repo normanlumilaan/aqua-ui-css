@@ -11,4 +11,25 @@ header(class="aqua-menubar", id="aqua-menubar", data-aqua-elem="menu-bar")
         each item, index in ["File", "Edit", "View", "Help"]
           li(class="aqua-menubar__nav-item", id="aqua-menubar-nav-menu")
             button(class="aqua-menubar__btn", type="button")= item
+            ul(class="aqua-menubar-submenu")
+              li(class="aqua-menubar-submenu__item")
+                button(class="aqua-menubar-submenu__btn")
+                  span Recent Items 
+                  span ▶︎
+              li(class="aqua-menubar-submenu__item")
+                button(class="aqua-menubar-submenu__btn")
+                  span GitHub 
+                  span ▶︎
+              li(class="aqua-menubar-submenu__item aqua-menubar-submenu__item--sep")
+                button(class="aqua-menubar-submenu__btn") Location
+              li(class="aqua-menubar-submenu__item")
+                button(class="aqua-menubar-submenu__btn")
+                  span Code
+                  span ⌥⌘C
+              li(class="aqua-menubar-submenu__item", tabindex="0")
+                button(class="aqua-menubar-submenu__btn") 
+                  span Menu Item 
+                  span ⌥⌘D
+
+
     div(class="aqua-menubar__datetime aqua-menubar__btn")= clock

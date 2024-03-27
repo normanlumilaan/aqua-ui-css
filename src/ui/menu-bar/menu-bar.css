@@ -7,23 +7,22 @@
   color: var(--aqua-color-black);
   width: 100%;
   box-sizing: border-box;
-  background-color: var(--aqua-color-white);
   font-size: var(--aqua-font-size);
-  padding-left: 0.5em;
-  padding-right: 0.5em;
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
-  background-color: var(--aqua-color-gray-1);
-  background: var(--aqua-bg-stripes);
   min-height: 1.28em;
   box-shadow: var(--aqua-box-shadow-2);
   z-index: 999;
+  background-color: var(--aqua-color-white);
 }
 
 .aqua-menubar__row {
   display: flex;
   flex-wrap: nowrap;
+  background: var(--aqua-bg-stripes);
+  padding-left: 0.3em;
+  padding-right: 0.3em;
 }
 
 .aqua-menubar__nav-menu {
@@ -56,7 +55,13 @@
   overflow: hidden;
 }
 
-.aqua-menubar__btn:active {
+.aqua-menubar__btn:focus {
+  outline: none;
+}
+
+.aqua-menubar__btn:active,
+.aqua-menubar__btn:hover,
+.aqua-menubar__btn:focus {
   background-color: var(--aqua-color-blue);
   color: var(--aqua-color-white);
 }
@@ -72,4 +77,58 @@
 
 .aqua-menubar__datetime {
   margin-left: auto;
+}
+
+.aqua-menubar-submenu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  min-width: 14em;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: var(--aqua-box-shadow-2);
+  border-top: 1px solid var(--aqua-color-gray-3);
+  background: var(--aqua-bg-stripes);
+  padding-bottom: 0.2em;
+  display: none;
+}
+
+.aqua-menubar-submenu__item--sep {
+  margin-bottom: 0.8em;
+}
+
+.aqua-menubar-submenu__btn {
+  cursor: default;
+  padding-left: 1.5em;
+  padding-right: 0.75em;
+  display: inline-block;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  text-shadow: var(--aqua-text-shadow);
+  line-height: var(--aqua-line-height);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.aqua-menubar-submenu__btn:active,
+.aqua-menubar-submenu__btn:focus,
+.aqua-menubar-submenu__btn:hover {
+  background-color: var(--aqua-color-blue);
+  color: var(--aqua-color-white);
+  outline: none;
+}
+
+.aqua-menubar__nav-item:focus-within > .aqua-menubar-submenu,
+.aqua-menubar__nav-item:hover > .aqua-menubar-submenu {
+  display: block;
 }
