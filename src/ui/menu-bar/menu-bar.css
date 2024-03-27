@@ -6,14 +6,11 @@
   font-family: var(--aqua-font-family);
   color: var(--aqua-color-black);
   width: 100%;
+  box-sizing: border-box;
   background-color: var(--aqua-color-white);
   font-size: var(--aqua-font-size);
-  display: flex;
-  flex-wrap: nowrap;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
@@ -24,11 +21,9 @@
   z-index: 999;
 }
 
-.aqua-menubar__inner {
-  position: relative;
-}
-
-.aqua-menubar__nav {
+.aqua-menubar__row {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .aqua-menubar__nav-menu {
@@ -39,9 +34,14 @@
 }
 
 .aqua-menubar__nav-item {
+  position: relative;
 }
 
-.aqua-menubar__nav-btn {
+.aqua-menubar__btn {
+  cursor: default;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  display: inline-block;
   appearance: none;
   background-color: transparent;
   border: none;
@@ -50,9 +50,26 @@
   font-size: inherit;
   text-decoration: none;
   text-shadow: var(--aqua-text-shadow);
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  line-height: var(--aqua-line-height);
+  overflow: hidden;
 }
 
-.aqua-menubar__nav-btn--disabled {
+.aqua-menubar__btn:active {
+  background-color: var(--aqua-color-blue);
+  color: var(--aqua-color-white);
+}
+
+.aqua-menubar__btn--disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.aqua-menubar__btn--program-name {
+  font-weight: 600;
+}
+
+.aqua-menubar__datetime {
+  margin-left: auto;
 }

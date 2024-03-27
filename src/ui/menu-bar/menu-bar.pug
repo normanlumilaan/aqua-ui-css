@@ -1,8 +1,14 @@
 //- OS menu bar
-header(class="aqua-menubar", id="aqua-menubar")
-  div(class="aqua-menubar__inner")
+- const date = new Date(Date.now());
+- const clock = new Intl.DateTimeFormat('en-US', {weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: true}).format(date);
+
+header(class="aqua-menubar", id="aqua-menubar", data-aqua-elem="menu-bar")
+  div(class="aqua-menubar__row")
+    a(class="aqua-menubar__btn" href= url) ♥︎
+    button(type="button" class="aqua-menubar__btn aqua-menubar__btn--program-name", id="aqua-menubar-program-name") Aqua UI CSS
     nav(class="aqua-menubar__nav", id="aqua-menubar-nav")
       ul(class="aqua-menubar__nav-menu", id="aqua-menubar-nav-menu")
         each item, index in ["File", "Edit", "View", "Help"]
           li(class="aqua-menubar__nav-item", id="aqua-menubar-nav-menu")
-            button(class="aqua-menubar__nav-btn")= item
+            button(class="aqua-menubar__btn", type="button")= item
+    div(class="aqua-menubar__datetime aqua-menubar__btn")= clock

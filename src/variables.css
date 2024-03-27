@@ -1,6 +1,6 @@
 /** Library variables here */
 :root {
-  --aqua-color-blue: #007aff;
+  --aqua-color-blue: #2874da;
   --aqua-color-graphite: #333333;
   --aqua-color-white: #ffffff;
   --aqua-color-gray-1: #f4f4f4;
@@ -17,7 +17,7 @@
   /** e.g. Window inactive state */
   --aqua-box-shadow-1: 0 0.3em 0.3em rgba(0, 0, 0, 0.25);
   /** e.g. Window active state */
-  --aqua-box-shadow-2: 0 1em 1em rgba(0, 0, 0, 0.4);
+  --aqua-box-shadow-2: 0 0.6em 1em rgba(0, 0, 0, 0.47);
   --aqua-text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
   --aqua-bg-stripes: repeating-linear-gradient(
     0deg,
