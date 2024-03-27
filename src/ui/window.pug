@@ -1,10 +1,14 @@
 include ../components/elements/window/window-main.pug
 include ../components/elements/window/window-title.pug
 include ../components/elements/window/window-body.pug
+include ../components/elements/window/window-content.pug
 include ../components/elements/window/window-navbar.pug
 include ../components/elements/window/window-navbar-btn.pug
 include ../components/elements/layout/layout.pug
+include ../components/elements/layout/layout-wrapper.pug
 include ../components/elements/layout/layout-row.pug
+include ../components/elements/layout/layout-col.pug
+include ../components/button-rounded/button-rounded.pug
 
 // ui/window
 +window-main()(
@@ -34,4 +38,19 @@ include ../components/elements/layout/layout-row.pug
       +window-navbar-btn("Eject") 
         span.icon.icon--md ⏏
         span Eject
+    +window-content()
+      +layout()
+        +layout-wrapper()
+          +layout-row()
+            +layout-col(12)
+              p Two-column layout
+          +layout-row()
+            +layout-col(6)
+              +layout-row()
+                +button-rounded("Blue button", "blue")
+                  span Blue button
+                +button-rounded("Red button", "yellow")
+                  span Yellow button
+            +layout-col(6)
+              span Some text here
 // /ui/window
