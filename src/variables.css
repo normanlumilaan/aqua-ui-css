@@ -1,0 +1,23 @@
+/** Library variables here */
+:root {
+  --aqua-color-blue: #007aff;
+  --aqua-color-graphite: #333333;
+  --aqua-color-white: #ffffff;
+  --aqua-color-gray-1: #f4f4f4;
+  --aqua-color-gray-2: #dcdcdc;
+  --aqua-color-gray-3: #aaaaaa;
+  --aqua-color-black: #000000;
+  --aqua-color-green: #35cb00;
+  --aqua-color-yellow: #ffae00;
+  --aqua-color-red: #d50b00;
+  --aqua-font-family: "Lucida Grande", sans-serif;
+  --aqua-font-size: 14px;
+  --aqua-line-height: 1.3;
+  --aqua-shadow-color: rgba(0, 0, 0, 0.35);
+  --aqua-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  --aqua-bg-stripes: repeating-linear-gradient(
+    0deg,
+    #ffffff 10px,
+    #dcdcdc 14px
+  );
+}

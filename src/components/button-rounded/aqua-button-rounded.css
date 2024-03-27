@@ -1,0 +1,110 @@
+/** Horizontal rectangular button with rounded edges. */
+.aqua-btn-rounded {
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--aqua-font-family);
+  font-size: var(--aqua-font-size);
+  color: var(--aqua-color-black);
+  background: var(--aqua-color-gray-2);
+  cursor: pointer;
+  box-sizing: border-box;
+  border-color: var(--aqua-color-gray-2);
+  border-style: solid;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  min-width: 6em;
+  border-top-left-radius: 1em 1em;
+  border-top-right-radius: 1em 1em;
+  border-bottom-left-radius: 1em 1em;
+  border-bottom-right-radius: 1em 1em;
+  position: relative;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+/** Gel effect */
+.aqua-btn-rounded:before,
+.aqua-btn-rounded:after {
+  content: " ";
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  width: 86%;
+}
+
+.aqua-btn-rounded:before {
+  top: 1px;
+  height: 0.6em;
+  background: linear-gradient(
+    to top,
+    transparent,
+    rgba(255, 255, 255, 0.8) 65%
+  );
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 0.8em;
+  border-bottom-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+}
+
+.aqua-btn-rounded:after {
+  bottom: 1px;
+  height: 0.8em;
+  background: radial-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
+  border-bottom-left-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;
+}
+
+.aqua-btn-rounded--white {
+  background: radial-gradient(
+    var(--aqua-color-gray-1) 40%,
+    var(--aqua-color-gray-3)
+  );
+}
+
+.aqua-btn-rounded--blue {
+  background: radial-gradient(
+    color-mix(in srgb, var(--aqua-color-blue) 40%, #ffffff) 40%,
+    color-mix(in srgb, var(--aqua-color-blue) 80%, black)
+  );
+}
+
+.aqua-btn-rounded--red {
+  background: radial-gradient(
+    color-mix(in srgb, var(--aqua-color-red) 40%, #ffffff) 40%,
+    color-mix(in srgb, var(--aqua-color-red) 80%, black)
+  );
+}
+
+.aqua-btn-rounded--green {
+  background: radial-gradient(
+    color-mix(in srgb, var(--aqua-color-green) 40%, #ffffff) 40%,
+    color-mix(in srgb, var(--aqua-color-green) 80%, black)
+  );
+}
+
+.aqua-btn-rounded--yellow {
+  background: radial-gradient(
+    color-mix(in srgb, var(--aqua-color-yellow) 40%, #ffffff) 40%,
+    color-mix(in srgb, var(--aqua-color-yellow) 80%, black)
+  );
+}
+
+.aqua-btn-rounded:disabled,
+.aqua-btn-rounded[disabled] {
+  opacity: 0.7;
+  pointer-events: none;
+}
