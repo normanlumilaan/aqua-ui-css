@@ -1,3 +1,77 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #6398c8;
+  background-image: url("/aqua-ui-css/img/mac_osx_tiger_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #232323;
+  padding: 0;
+  margin: 0;
+  background-color: #6aa5cd;
+}
+a {
+  color: inherit;
+  display: inline-block;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  max-width: 66ch;
+}
+.docs__section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.docs__section-row {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.docs__section-wrap {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.docs__section-header {
+  padding-bottom: 1.6em;
+}
+.docs__section-title {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 0;
+}
+.docs__example {
+  padding-bottom: 3em;
+}
+.docs-header {
+  font-size: 1.1em;
+  color: #fbfbfb;
+}
+.docs-header__logo {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.docs-footer {
+  background-color: #6aa5cd;
+}
+.docs-footer__row {
+  color: #ffffff;
+  font-size: 0.8em;
+}
 /** CSS input file */
 
 /** Library variables here */
@@ -677,78 +751,4 @@ Text inside button */
 .aqua-menubar__nav-item:focus-within > .aqua-menubar-submenu,
 .aqua-menubar__nav-item:hover > .aqua-menubar-submenu {
   display: block;
-}
-:root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 62.5%;
-}
-
-body {
-  background-color: #6398c8;
-  background-image: url("/aqua-ui-css/img/mac_osx_tiger_wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #232323;
-  padding: 0;
-  margin: 0;
-  background-color: #6aa5cd;
-}
-a {
-  color: inherit;
-  display: inline-block;
-}
-a:hover {
-  text-decoration: none;
-}
-p {
-  max-width: 66ch;
-}
-.docs__section {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-.docs__section-row {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-}
-.docs__section-wrap {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.docs__section-header {
-  padding-bottom: 1.6em;
-}
-.docs__section-title {
-  font-size: 1.2em;
-  font-weight: 500;
-  margin: 0;
-}
-.docs__example {
-  padding-bottom: 3em;
-}
-.docs-header {
-  font-size: 1.1em;
-  color: #fbfbfb;
-}
-.docs-header__logo {
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-.docs-footer {
-  background-color: #6aa5cd;
-}
-.docs-footer__row {
-  color: #ffffff;
-  font-size: 0.8em;
 }
