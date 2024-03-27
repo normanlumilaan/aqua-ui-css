@@ -1,0 +1,16 @@
+include ./section.pug
+
+header.docs__section.docs-header 
+  .docs__section-wrap 
+    a(class="docs-header__logo" href= url)= name
+    p #{description}
+    p #[a(href= repoUrl) GitHub]
+
+main.docs-main
+  include ./examples/buttons-example.pug
+  include ./examples/windows-example.pug
+
+footer.docs__section.docs-footer
+  .docs__section-wrap
+    div.docs-footer__row
+      span &copy; 2024 #[a(href= url) #{name} v#{version}]

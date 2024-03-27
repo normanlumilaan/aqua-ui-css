@@ -1,0 +1,26 @@
+.aqua-dialog__body {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  max-width: 38em;
+  margin: 0 auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.aqua-dialog__icon {
+  margin: 0;
+  min-width: 130px;
+}
+
+.aqua-dialog__icon-img {
+  padding: 0 1em;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.aqua-dialog__title {
+  margin: 0;
+  font-weight: 600;
+}

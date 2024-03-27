@@ -1,0 +1,1 @@
+Horizontal rectangular button with rounded edges.
