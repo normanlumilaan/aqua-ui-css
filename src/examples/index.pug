@@ -1,6 +1,7 @@
 include ./section.pug
 
-header.docs__section.docs-header 
+include ../ui/menu-bar/menu-bar.pug
+div.docs__section.docs-header 
   .docs__section-wrap 
     a(class="docs-header__logo" href= url)= name
     p #{description}
