@@ -1,19 +1,1 @@
-include ../section.pug 
-include ../../components/button-rounded/button-rounded.pug
-include ../../components/button-circular/button-circular.pug
 
-+section("Rounded rectangular buttons")(id="example-buttons-1", class="docs__example")
-  each item, index in ['white', 'blue', 'red', 'yellow', 'green']
-    +button-rounded("Click me!")(class="aqua-btn-rounded--" + item) Button ##{index + 1}
-  +button-rounded("Disabled")(disabled= true) Disabled
-
-+section("Circular buttons")(id="example-buttons-2", class="docs__example")
-  each item, index in ['white', 'red', 'yellow', 'green']
-    +button-circular("Circular button #" + (index + 1), item)= index + 1
-  +button-circular("Circular button disabled")(disabled= true) &#10005;
-
-+section("Circular buttons large")(id="example-buttons-3", class="docs__example")
-  each item, index in ['white', 'red', 'yellow', 'green']
-    +button-circular("Circular button #" + (index + 1), item)(class="aqua-btn-circular--lg")= index + 1
-  +button-circular("Circular button disabled")(class="aqua-btn-circular--lg", disabled= true) &#10005;
-  
