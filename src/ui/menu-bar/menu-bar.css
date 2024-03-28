@@ -19,12 +19,13 @@
   flex-wrap: nowrap;
   align-items: center;
   background: var(--aqua-bg-stripes);
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .aqua-menubar__item {
   position: relative;
+  cursor: default;
 }
 
 .aqua-menubar__item--programname {
@@ -93,6 +94,12 @@
   margin-bottom: 0.8em;
 }
 
+.aqua-menubar__nav-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .aqua-menubar-submenu__item:hover {
   background-color: var(--aqua-color-blue);
   color: #ffffff;
@@ -103,6 +110,7 @@
   padding-left: 1.6em;
   justify-content: space-between;
   outline: 1;
+  text-transform: capitalize;
 }
 
 .aqua-menubar-submenu__item-a:focus {

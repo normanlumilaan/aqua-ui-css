@@ -1,9 +1,34 @@
-- const formattedTime = (new Date()).toLocaleString('en-US', { weekday: 'short', hour: 'numeric', minute: '2-digit', hour12: true});
+- const clock = (new Date()).toLocaleString('en-US', { weekday: 'short', hour: 'numeric', minute: '2-digit', hour12: true});
+
+mixin menubar-item-submenu(id)
+  // submenu
+  ul(class="aqua-menubar-submenu" id= "menubar-submenu-" + id)
+    li.aqua-menubar-submenu__item
+      a(class="aqua-menubar-submenu__item-a", id= "menubar-item-" + id)
+        span Submenu Item
+        span ⌘⌥S
+    li.aqua-menubar-submenu__item
+      a(class="aqua-menubar-submenu__item-a")
+        span Second
+        span ⌘2
+    li.aqua-menubar-submenu__item.aqua-menubar-submenu__item--sep
+      a(class="aqua-menubar-submenu__item-a")
+        span Recents
+        span ⌘⌥R
+    li.aqua-menubar-submenu__item
+      a(class="aqua-menubar-submenu__item-a")
+        span Location
+        span ⌘⌥L
+    li.aqua-menubar-submenu__item
+      a(class="aqua-menubar-submenu__item-a")
+        span No Shortcut
+  // /submenu
 
 header(id="menubar", class="aqua-menubar")
   div(class="aqua-menubar__row")
     .aqua-menubar__item
       a(class="aqua-menubar__item-a", id="aqua-menubar-logo" href= homepage ) ♥︎
+      // submenu
       ul.aqua-menubar-submenu#aqua-menubar-program-menu
         li.aqua-menubar-submenu__item
           a( class="aqua-menubar-submenu__item-a" href="#aqua-ui-css-info")
@@ -11,35 +36,22 @@ header(id="menubar", class="aqua-menubar")
         li.aqua-menubar-submenu__item
           a(class="aqua-menubar-submenu__item-a" href= repoUrl)
             span Get Aqua UI CSS...
+        li.aqua-menubar-submenu__item
+          a(class="aqua-menubar-submenu__item-a" href= "https://guidebookgallery.org/screenshots/macosx100")
+            span Inspired By
+      // /submenu
     .aqua-menubar__item.aqua-menubar__item--programname 
       button(class="aqua-menubar__item-a", type="button") Aqua UI CSS
-      // submenu
-      ul.aqua-menubar-submenu#aqua-menubar-program-menu
-        li.aqua-menubar-submenu__item
-          a(class="aqua-menubar-submenu__item-a")
-            span Submenu Item
-            span ⌘⌥S
-        li.aqua-menubar-submenu__item
-          a(class="aqua-menubar-submenu__item-a")
-            span Second
-            span ⌘2
-        li.aqua-menubar-submenu__item.aqua-menubar-submenu__item--sep
-          a(class="aqua-menubar-submenu__item-a")
-            span Recents
-            span ⌘⌥R
-        li.aqua-menubar-submenu__item
-          a(class="aqua-menubar-submenu__item-a")
-            span Location
-            span ⌘⌥L
-        li.aqua-menubar-submenu__item
-          a(class="aqua-menubar-submenu__item-a")
-            span No Icon
-      // /submenu
-    .aqua-menubar__item 
-      button(class="aqua-menubar__item-a", href= "#") File
-    .aqua-menubar__item 
-      a(class="aqua-menubar__item-a", href= "#") Edit
-    .aqua-menubar__item 
-      a(class="aqua-menubar__item-a", href= "#") Info
+      +menubar-item-submenu("program")
+    // nav
+    nav.aqua-menubar__nav 
+      ul.aqua-menubar__nav-menu 
+        .aqua-menubar__item 
+          button(class="aqua-menubar__item-a") File
+        .aqua-menubar__item 
+          a(class="aqua-menubar__item-a") Edit
+        .aqua-menubar__item 
+          a(class="aqua-menubar__item-a") Info
+    // /nav
     .aqua-menubar__item.aqua-menubar__item--clock
-      span= formattedTime
+      span= clock

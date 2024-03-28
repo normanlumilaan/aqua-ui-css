@@ -1,7 +1,7 @@
 {
   "name": "aqua-ui-css",
   "version": "0.1.0",
-  "description": "An experimental CSS framework inspired by Apple Mac OS X Aqua theme introduced back in year 2000.",
+  "description": "An experiment to create a CSS framework inspired by the Apple Mac OS X Aqua theme introduced back in the year 2000.",
   "private": true,
   "type": "module",
   "homepage": "https://normanlumilaan.github.io/aqua-ui-css",
