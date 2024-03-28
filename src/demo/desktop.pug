@@ -1,6 +1,15 @@
 //- Demo page
 
+mixin window-wrapper(nth = "0", id = "")
+  // demo window wrapper
+  div(id= id, class="demo__window-wrapper demo__window-wrapper--" + nth)
+    if block 
+    block
+  // /demo window wrapper
+
 include ../ui/menu-bar/menu-bar.pug 
 main#desktop 
-  include ../ui/window.pug
-  include ../ui/window-info-1.pug
+  +window-wrapper("1")
+    include ../ui/window.pug
+  +window-wrapper("2", "aqua-ui-css-info")
+    include ../ui/window-info-1.pug

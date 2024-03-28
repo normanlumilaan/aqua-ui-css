@@ -25,14 +25,10 @@ include ../components/button-rounded/button-rounded.pug
     +window-content()
       +layout()
         +layout-wrapper()
-          +layout-row()
-            +layout-col(12)
+          +layout-row("align-center")
+            +layout-col(7)
               p= description
-              p blah
-          +layout-row()
-            +layout-col(6)
-              +layout-row()
-                +button-rounded("Blue button", "blue")
-                  span OK
+              a(href= "https://guidebookgallery.org/screenshots/macosx100")
+              span #{name} 2024
     // /window-content
 // /ui/window

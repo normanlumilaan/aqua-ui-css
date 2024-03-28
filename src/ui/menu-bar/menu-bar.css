@@ -27,6 +27,8 @@
   position: relative;
   cursor: default;
   text-shadow: var(--aqua-text-shadow);
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .aqua-menubar__item--programname {
@@ -54,8 +56,6 @@
   cursor: default;
   text-shadow: var(--aqua-text-shadow);
   position: relative;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   appearance: none;
   font-size: inherit;
   font-family: inherit;

@@ -42,14 +42,16 @@ include ../components/button-rounded/button-rounded.pug
         +layout-wrapper()
           +layout-row()
             +layout-col(12)
-              p Two-column layout
+              p Window-buttons, navbar and two rows with columns 12 and 2 x 6.
           +layout-row()
             +layout-col(6)
-              +layout-row()
-                +button-rounded("Blue button", "blue")
-                  span Blue button
-                +button-rounded("Red button", "yellow")
-                  span Yellow button
+              span Column A
             +layout-col(6)
-              span Some text here
+              span Column B
+              +layout-row("align-end")
+                +button-rounded("Cancel")
+                  span Cancel
+                +button-rounded("OK", "blue")
+                  span OK
+
 // /ui/window

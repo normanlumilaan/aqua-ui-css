@@ -22,4 +22,25 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  position: relative;
+}
+
+.demo__window-wrapper {
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .demo__window-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .demo__window-wrapper--1 {
+    translate: 50% 130%;
+  }
+
+  .demo__window-wrapper--2 {
+    translate: 13% 40%;
+  }
 }
