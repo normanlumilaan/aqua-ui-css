@@ -26,6 +26,7 @@
 .aqua-menubar__item {
   position: relative;
   cursor: default;
+  text-shadow: var(--aqua-text-shadow);
 }
 
 .aqua-menubar__item--programname {
@@ -88,6 +89,10 @@
   padding-bottom: 0.2em;
   background: var(--aqua-bg-stripes);
   display: none;
+}
+
+.aqua-menubar-submenu__item {
+  position: relative;
 }
 
 .aqua-menubar-submenu__item--sep {
