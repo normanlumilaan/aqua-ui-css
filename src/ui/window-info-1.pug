@@ -1,0 +1,34 @@
+include ../components/elements/window/window-main.pug
+include ../components/elements/window/window-title.pug
+include ../components/elements/window/window-body.pug
+include ../components/elements/window/window-content.pug
+include ../components/elements/window/window-navbar.pug
+include ../components/elements/window/window-navbar-btn.pug
+include ../components/elements/layout/layout.pug
+include ../components/elements/layout/layout-wrapper.pug
+include ../components/elements/layout/layout-row.pug
+include ../components/elements/layout/layout-col.pug
+include ../components/button-rounded/button-rounded.pug
+
+// ui/window
++window-main()(
+  data-aqua-focus="false", 
+  role="dialog",
+  id="ui-window-info-1",
+  aria-labelledby="ui-window-info-1-title",
+  aria-describedby="ui-window-info-1-desc"
+  )
+  //- Show window buttons by setting hasButtons to true
+  +window-title("About", false)
+  +window-body()
+    // window-content
+    +window-content()
+      +layout()
+        +layout-wrapper()
+          +layout-row("align-center")
+            +layout-col(7)
+              p= description
+              a(href= "https://guidebookgallery.org/screenshots/macosx100")
+              span #{name} 2024
+    // /window-content
+// /ui/window

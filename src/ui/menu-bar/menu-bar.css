@@ -26,6 +26,9 @@
 .aqua-menubar__item {
   position: relative;
   cursor: default;
+  text-shadow: var(--aqua-text-shadow);
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .aqua-menubar__item--programname {
@@ -53,8 +56,6 @@
   cursor: default;
   text-shadow: var(--aqua-text-shadow);
   position: relative;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   appearance: none;
   font-size: inherit;
   font-family: inherit;
@@ -90,6 +91,10 @@
   display: none;
 }
 
+.aqua-menubar-submenu__item {
+  position: relative;
+}
+
 .aqua-menubar-submenu__item--sep {
   margin-bottom: 0.8em;
 }
@@ -121,4 +126,8 @@
 .aqua-menubar__item-a:focus + .aqua-menubar-submenu,
 .aqua-menubar-submenu:hover {
   display: block;
+}
+
+#aqua-menubar-logo svg {
+  fill: var(--aqua-color-black);
 }

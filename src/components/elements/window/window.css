@@ -10,7 +10,7 @@
   font-size: var(--aqua-font-size);
   font-family: var(--aqua-font-family);
   color: var(--aqua-color-black);
-  width: 70ch;
+  max-width: 70ch;
   min-width: 290px;
   opacity: 1;
   overflow: hidden;
