@@ -28,6 +28,10 @@
   flex-grow: 0;
 }
 
+.aqua-layout__col > p:first-child {
+  margin-top: 0;
+}
+
 .aqua-layout__col--1 {
   flex-basis: calc(100% / 12 * 1);
 }
