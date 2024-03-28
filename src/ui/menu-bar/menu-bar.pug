@@ -1,35 +1,16 @@
-//- OS menu bar
-- const date = new Date(Date.now());
-- const clock = new Intl.DateTimeFormat('en-US', {weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: true}).format(date);
+- const formattedTime = (new Date()).toLocaleString('en-US', { weekday: 'short', hour: 'numeric', minute: '2-digit', hour12: true});
 
-header(class="aqua-menubar", id="aqua-menubar", data-aqua-elem="menu-bar")
+header(id="menubar", class="aqua-menubar")
   div(class="aqua-menubar__row")
-    a(class="aqua-menubar__btn" href= url) ♥︎
-    button(type="button" class="aqua-menubar__btn aqua-menubar__btn--program-name", id="aqua-menubar-program-name") Aqua UI CSS
-    nav(class="aqua-menubar__nav", id="aqua-menubar-nav")
-      ul(class="aqua-menubar__nav-menu", id="aqua-menubar-nav-menu")
-        each item, index in ["File", "Edit", "View", "Help"]
-          li(class="aqua-menubar__nav-item", id="aqua-menubar-nav-menu")
-            button(class="aqua-menubar__btn", type="button")= item
-            ul(class="aqua-menubar-submenu")
-              li(class="aqua-menubar-submenu__item")
-                button(class="aqua-menubar-submenu__btn")
-                  span Recent Items 
-                  span ▶︎
-              li(class="aqua-menubar-submenu__item")
-                button(class="aqua-menubar-submenu__btn")
-                  span GitHub 
-                  span ▶︎
-              li(class="aqua-menubar-submenu__item aqua-menubar-submenu__item--sep")
-                button(class="aqua-menubar-submenu__btn") Location
-              li(class="aqua-menubar-submenu__item")
-                button(class="aqua-menubar-submenu__btn")
-                  span Code
-                  span ⌥⌘C
-              li(class="aqua-menubar-submenu__item", tabindex="0")
-                button(class="aqua-menubar-submenu__btn") 
-                  span Menu Item 
-                  span ⌥⌘D
-
-
-    div(class="aqua-menubar__datetime aqua-menubar__btn")= clock
+    .aqua-menubar__item#aqua-menubar-logo 
+      span ♥︎
+    .aqua-menubar__item.aqua-menubar__item--programname 
+      span Aqua UI CSS
+    .aqua-menubar__item 
+      span File
+    .aqua-menubar__item 
+      span Edit
+    .aqua-menubar__item 
+      span Info
+    .aqua-menubar__item.aqua-menubar__item--clock
+      span= formattedTime
