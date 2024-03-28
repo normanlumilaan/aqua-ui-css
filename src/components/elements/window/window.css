@@ -9,48 +9,34 @@
   position: relative;
   font-size: var(--aqua-font-size);
   font-family: var(--aqua-font-family);
+  color: var(--aqua-color-black);
   width: 70ch;
   min-width: 290px;
   opacity: 1;
   overflow: hidden;
-  z-index: 1;
   line-height: var(--aqua-line-height);
   box-shadow: var(--aqua-box-shadow-1);
 }
 
 .aqua-window__title {
+  background-color: var(--aqua-color-white);
+  border-bottom: 2px solid var(--aqua-color-gray-2);
+  opacity: 0.5;
+}
+
+.aqua-window__title-inner {
   display: flex;
   flex-wrap: nowrap;
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
-  border-bottom: inherit;
-  border-bottom-width: 2px;
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
-  background-color: var(--aqua-color-gray-1);
-  background: var(--aqua-bg-stripes);
-  opacity: 0.5;
   min-height: 1.28em;
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
-}
-
-.aqua-window:focus,
-.aqua-window:focus-within {
-  z-index: 2;
-  box-shadow: var(--aqua-box-shadow-2);
-}
-
-.aqua-window:focus .aqua-window__title,
-.aqua-window:focus-within .aqua-window__title {
-  opacity: 1;
-}
-
-.aqua-window:focus .aqua-window__title,
-.aqua-window:focus-within .aqua-window__title {
-  opacity: 1;
+  background: var(--aqua-bg-stripes);
+  text-shadow: var(--aqua-text-shadow);
 }
 
 .aqua-window__title-txt {
@@ -58,6 +44,7 @@
   text-align: center;
   flex-basis: 50%;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
   margin: 0;
   flex-grow: 1;
@@ -70,7 +57,10 @@
   gap: 0.8em;
 }
 
-/** A html element for flex layout. Possibly replaced by button */
+/** 
+A placeholder element used by flex layout. 
+Possibly replaced by button 
+*/
 .aqua-window__title-left {
   flex-basis: 25%;
   display: flex;
@@ -110,6 +100,7 @@
   overflow: hidden;
   border: none;
   font-size: inherit;
+  color: inherit;
 }
 
 .aqua-window__navbar-btn:active {
@@ -118,4 +109,15 @@
 
 .aqua-window__navbar-btn:hover {
   background-color: var(--aqua-color-gray-2);
+}
+
+.aqua-window:focus,
+.aqua-window:focus-within {
+  z-index: 2;
+  box-shadow: var(--aqua-box-shadow-2);
+}
+
+.aqua-window:focus .aqua-window__title,
+.aqua-window:focus-within .aqua-window__title {
+  opacity: 1;
 }

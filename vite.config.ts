@@ -9,6 +9,7 @@ export default defineConfig({
   build: {
     outDir: "docs",
     cssMinify: false,
+
     lib: {
       entry: path.resolve(__dirname, "src/main.ts"),
       name: "aqua-ui-css",
