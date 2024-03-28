@@ -127,3 +127,7 @@
 .aqua-menubar-submenu:hover {
   display: block;
 }
+
+#aqua-menubar-logo svg {
+  fill: var(--aqua-color-black);
+}

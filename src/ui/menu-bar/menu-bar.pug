@@ -27,7 +27,9 @@ mixin menubar-item-submenu(id)
 header(id="menubar", class="aqua-menubar")
   div(class="aqua-menubar__row")
     .aqua-menubar__item
-      a(class="aqua-menubar__item-a", id="aqua-menubar-logo" href= homepage ) ♥︎
+      a(class="aqua-menubar__item-a", id="aqua-menubar-logo" href= homepage )
+        span.icon
+          include ../../icons/heart.svg
       // submenu
       ul.aqua-menubar-submenu#aqua-menubar-program-menu
         li.aqua-menubar-submenu__item
