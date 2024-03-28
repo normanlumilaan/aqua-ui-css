@@ -25,22 +25,46 @@ body {
   position: relative;
 }
 
-.demo__window-wrapper {
+#desktop {
+  height: 100%;
+  position: relative;
+}
+
+#desktop .aqua-window {
   margin: 15px;
+  transition: translate 400ms;
 }
 
 @media screen and (min-width: 768px) {
-  .demo__window-wrapper {
+  #desktop .aqua-window {
     position: absolute;
     top: 0;
     left: 0;
   }
 
-  .demo__window-wrapper--1 {
-    translate: 50% 130%;
+  #ui-window-info-1 {
+    translate: 3% 3%;
   }
 
-  .demo__window-wrapper--2 {
-    translate: 13% 40%;
+  #ui-program-window {
+    translate: 50% 90%;
+  }
+
+  #aqua-dialog-1 {
+    translate: 10% 200%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #ui-window-info-1 {
+    translate: 3% 3%;
+  }
+
+  #ui-program-window {
+    translate: 85% 75%;
+  }
+
+  #aqua-dialog-1 {
+    translate: 40% 200%;
   }
 }

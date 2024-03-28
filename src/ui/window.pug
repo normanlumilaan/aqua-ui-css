@@ -12,11 +12,12 @@ include ../components/button-rounded/button-rounded.pug
 
 // ui/window
 +window-main()(
+  id="ui-program-window",
   class="aqua-dialog", 
   data-aqua-focus="true", 
   role="dialog",
-  aria-labelledby="aqua-dialog-1-title",
-  aria-describedby="aqua-dialog-1-desc"
+  aria-labelledby="ui-program-window-1-title",
+  aria-describedby="ui-program-window-1-desc"
   )
   //- Show window buttons by setting hasButtons to true
   +window-title("Window title", true)
@@ -45,13 +46,11 @@ include ../components/button-rounded/button-rounded.pug
               p Window-buttons, navbar and two rows with columns 12 and 2 x 6.
           +layout-row()
             +layout-col(6)
-              span Column A
+              p Column A
             +layout-col(6)
-              span Column B
+              p Column B
               +layout-row("align-end")
-                +button-rounded("Cancel")
-                  span Cancel
-                +button-rounded("OK", "blue")
-                  span OK
+                +button-rounded("White") White
+                +button-rounded("Red", "red") Red button
 
 // /ui/window
