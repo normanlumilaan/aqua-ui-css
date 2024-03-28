@@ -24,20 +24,7 @@
 }
 
 .aqua-menubar__item {
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  padding-left: 0.6em;
-  padding-right: 0.6em;
-  cursor: default;
-  text-shadow: var(--aqua-text-shadow);
   position: relative;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.aqua-menubar__item:hover {
-  background-color: var(--aqua-color-blue);
-  color: #ffffff;
 }
 
 .aqua-menubar__item--programname {
@@ -51,4 +38,79 @@
 .aqua-menubar__item--clock:hover {
   background-color: transparent;
   color: inherit;
+}
+
+/** Anchor or button */
+.aqua-menubar__item-a,
+.aqua-menubar-submenu__item-a {
+  text-decoration: none;
+  display: flex;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  cursor: default;
+  text-shadow: var(--aqua-text-shadow);
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  appearance: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.aqua-menubar__item-a:hover,
+.aqua-menubar__item-a:focus {
+  background-color: var(--aqua-color-blue);
+  color: #ffffff;
+}
+
+.aqua-menubar-submenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--aqua-color-graphite);
+  min-width: 8em;
+  font-weight: 500;
+  line-height: inherit;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: var(--aqua-box-shadow-2);
+  z-index: 99;
+  padding-bottom: 0.2em;
+  background: var(--aqua-bg-stripes);
+  display: none;
+}
+
+.aqua-menubar-submenu__item--sep {
+  margin-bottom: 0.8em;
+}
+
+.aqua-menubar-submenu__item:hover {
+  background-color: var(--aqua-color-blue);
+  color: #ffffff;
+}
+
+.aqua-menubar-submenu__item-a {
+  gap: 3em;
+  padding-left: 1.6em;
+  justify-content: space-between;
+  outline: 1;
+}
+
+.aqua-menubar-submenu__item-a:focus {
+  outline-width: 2px;
+}
+
+.aqua-menubar__item-a:hover + .aqua-menubar-submenu,
+.aqua-menubar__item-a:focus + .aqua-menubar-submenu,
+.aqua-menubar-submenu:hover {
+  display: block;
 }

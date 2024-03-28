@@ -3,14 +3,43 @@
 header(id="menubar", class="aqua-menubar")
   div(class="aqua-menubar__row")
     .aqua-menubar__item#aqua-menubar-logo 
-      span ♥︎
+      a(class="aqua-menubar__item-a", href= homepage ) ♥︎
+      ul.aqua-menubar-submenu#aqua-menubar-program-menu
+        li.aqua-menubar-submenu__item
+          a( class="aqua-menubar-submenu__item-a" href="#aqua-ui-css-info")
+            span About This App
+        li.aqua-menubar-submenu__item
+          a(class="aqua-menubar-submenu__item-a" href= repoUrl)
+            span Get Aqua UI CSS...
     .aqua-menubar__item.aqua-menubar__item--programname 
-      span Aqua UI CSS
+      button(class="aqua-menubar__item-a", type="button") Aqua UI CSS
+      // submenu
+      ul.aqua-menubar-submenu#aqua-menubar-program-menu
+        li.aqua-menubar-submenu__item
+          a(class="aqua-menubar-submenu__item-a")
+            span Submenu Item
+            span ⌘⌥S
+        li.aqua-menubar-submenu__item
+          a(class="aqua-menubar-submenu__item-a")
+            span Second
+            span ⌘2
+        li.aqua-menubar-submenu__item.aqua-menubar-submenu__item--sep
+          a(class="aqua-menubar-submenu__item-a")
+            span Recents
+            span ⌘⌥R
+        li.aqua-menubar-submenu__item
+          a(class="aqua-menubar-submenu__item-a")
+            span Location
+            span ⌘⌥L
+        li.aqua-menubar-submenu__item
+          a(class="aqua-menubar-submenu__item-a")
+            span No Icon
+      // /submenu
     .aqua-menubar__item 
-      span File
+      button(class="aqua-menubar__item-a", href= "#") File
     .aqua-menubar__item 
-      span Edit
+      a(class="aqua-menubar__item-a", href= "#") Edit
     .aqua-menubar__item 
-      span Info
+      a(class="aqua-menubar__item-a", href= "#") Info
     .aqua-menubar__item.aqua-menubar__item--clock
       span= formattedTime
