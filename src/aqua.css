@@ -1,6 +1,7 @@
 /** CSS input file */
 
 @import "./variables.css";
+@import "./common.css";
 @import "./icons/icon.css";
 @import "./components/button/button.css";
 @import "./components/button-rounded/aqua-button-rounded.css";
