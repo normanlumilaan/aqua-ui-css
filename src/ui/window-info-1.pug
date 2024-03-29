@@ -1,13 +1,13 @@
-include ../components/elements/window/window-main.pug
-include ../components/elements/window/window-title.pug
-include ../components/elements/window/window-body.pug
-include ../components/elements/window/window-content.pug
-include ../components/elements/window/window-navbar.pug
-include ../components/elements/window/window-navbar-btn.pug
-include ../components/elements/layout/layout.pug
-include ../components/elements/layout/layout-wrapper.pug
-include ../components/elements/layout/layout-row.pug
-include ../components/elements/layout/layout-col.pug
+include ../components/window/window-main.pug
+include ../components/window/window-title.pug
+include ../components/window/window-body.pug
+include ../components/window/window-content.pug
+include ../components/window/window-navbar.pug
+include ../components/window/window-navbar-btn.pug
+include ../components/layout/layout.pug
+include ../components/layout/layout-wrapper.pug
+include ../components/layout/layout-row.pug
+include ../components/layout/layout-col.pug
 include ../components/button-rounded/button-rounded.pug
 
 // ui/window
@@ -26,9 +26,15 @@ include ../components/button-rounded/button-rounded.pug
       +layout()
         +layout-wrapper()
           +layout-row("align-center")
-            +layout-col(7)
+            +layout-col(10)
               p= description
-              a(href= "https://guidebookgallery.org/screenshots/macosx100")
-              span #{name} 2024
+              p 
+                a(href= "https://guidebookgallery.org/screenshots/macosx100") OS X 10.0 screenshots
+              p 
+                a.link.link--icon(href= repoUrl, title= name, aria-label= name) 
+                  span.icon.icon--sm
+                    include ../icons/github.svg
+                  span #{name} #{version}
+              p= (new Date().getFullYear())
     // /window-content
 // /ui/window

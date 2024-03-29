@@ -1,0 +1,12 @@
+//- 
+  Window component that holds window-title and window-body
+mixin window-main(id)
+  div(
+    class="aqua-window"
+    id= id, 
+    data-aqua-elem="window-main", 
+    data-aqua-focus="false"
+    tabindex="0"
+    )&attributes(attributes)
+    if block 
+      block

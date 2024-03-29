@@ -1,13 +1,14 @@
 /** CSS input file */
 
 @import "./variables.css";
+@import "./common.css";
 @import "./icons/icon.css";
-@import "./components/elements/button/button.css";
+@import "./components/button/button.css";
 @import "./components/button-rounded/aqua-button-rounded.css";
 @import "./components/button-circular/aqua-button-circular.css";
 
-@import "./components/elements/layout/layout.css";
-@import "./components/elements/window/window.css";
+@import "./components/layout/layout.css";
+@import "./components/window/window.css";
 
 @import "./ui/dialog/dialog.css";
 @import "./ui/menu-bar/menu-bar.css";

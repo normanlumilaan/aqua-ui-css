@@ -1,0 +1,17 @@
+include ../button-circular/button-circular.pug
+include ../button-rounded/button-rounded.pug
+
+mixin window-title(title, hasButtons = false)
+  .aqua-window__title(
+    data-aqua-elem="window-title"
+  )&attributes(attributes)
+    div(class="aqua-window__title-inner")
+      if hasButtons !== false 
+        .aqua-window__buttons(data-aqua-elem="window-buttons")
+          +button-circular("Close window", "red")(class="aqua-window__buttons-btn")
+          +button-circular("Minimize", "yellow")(class="aqua-window__buttons-btn")
+          +button-circular("Maximize", "green")(class="aqua-window__buttons-btn")
+      h4.aqua-window__title-txt= title
+      if hasButtons !== false 
+        div.aqua-window__title-left
+          +button-rounded("What does this button do?")(class="aqua-window__buttons-btn")

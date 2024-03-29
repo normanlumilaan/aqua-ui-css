@@ -1,0 +1,11 @@
+//- Base for all buttons
+mixin button(label)
+  button(
+    aria-disabled= attributes.disabled ? "true" : null,
+    type="button",
+    aria-label= label, 
+    title= label,
+    data-aqua-elem="button"
+  )&attributes(attributes)
+    if block 
+      block
