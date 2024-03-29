@@ -130,4 +130,5 @@
 
 #aqua-menubar-logo svg {
   fill: var(--aqua-color-black);
+  stroke: var(--aqua-color-black);
 }
