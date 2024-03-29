@@ -1,0 +1,14 @@
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.link--icon {
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
+}
