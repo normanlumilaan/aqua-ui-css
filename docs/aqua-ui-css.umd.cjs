@@ -1,1 +1,1 @@
-(function(e){typeof define=="function"&&define.amd?define(e):e()})(function(){"use strict"});
+(function(e){typeof define=="function"&&define.amd?define(e):e()})(function(){"use strict";function e(t){if(t===null)return;function n(){const r=new Date().toLocaleString("en-US",{weekday:"short",hour:"numeric",minute:"2-digit",hour12:!0});t&&(t.textContent=r)}n(),setInterval(n,6e4)}e(document.querySelector("#menubar-clock"))});
